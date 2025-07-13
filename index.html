@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YourProject Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <style>
+    body { max-width: 800px; margin: auto; padding: 2em; font-family: sans-serif; }
+    .app-name, .sidebar, .app-nav, .app-nav li { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+
+  <script>
+    window.$docsify = {
+      loadSidebar: false,
+      loadNavbar: false,
+      coverpage: false,
+      homepage: 'README.md',
+      auto2top: true,
+      name: '',
+    }
+  </script>
+
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
+</html>
