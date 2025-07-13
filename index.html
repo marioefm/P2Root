@@ -2,37 +2,28 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Vertical Scroll Docs</title>
+  <title>YourProject Docs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <style>
+    body { max-width: 800px; margin: auto; padding: 2em; font-family: sans-serif; }
+    .app-name, .sidebar, .app-nav, .app-nav li { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
 
-  <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
-  <!-- Dark mode toggle (optional) -->
   <script>
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    window.$docsify = {
+      loadSidebar: false,
+      loadNavbar: false,
+      coverpage: false,
+      homepage: 'README.md',
+      auto2top: true,
+      name: '',
+    }
   </script>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    #app {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    /* Hide Docsify sidebar + toggle */
-    .sidebar, .sidebar-toggle {
-      display: none !important;
-    }
-
-    /* Dark/Light theme switch */
-    :root {
-
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+</body>
+</html>
